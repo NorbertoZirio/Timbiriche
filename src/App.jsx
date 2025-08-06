@@ -1,7 +1,16 @@
 import './styles/App.css'
+import BuildHeader from "./components/header";
 
 function App() {
-  return <h1>Hello World!</h1>
+  return (
+    <div
+      style={{
+        height: "100%",
+      }}
+    >
+      <BuildHeader></BuildHeader>
+    </div>
+  );
 }
 
 export default App
