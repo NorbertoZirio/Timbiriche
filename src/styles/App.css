@@ -40,3 +40,19 @@ li:hover{
   fill: #E37C20;
   scale: 1.1;
 }
+
+.arrow-lefth, .arrow-rigth{
+  position: absolute;
+  width: 40px;
+  aspect-ratio: 1/1;
+  fill: #E37C20;
+  transition: transform 0.3s;
+}
+
+.arrow-lefth{
+  left: 10px;
+}
+
+.arrow-rigth{
+  right: 10px;
+}

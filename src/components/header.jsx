@@ -20,6 +20,7 @@ export default function BuildHeader() {
         backgroundPosition: "top center",
         overflow: "hidden",
         filter: "contrast(120%)",
+        zIndex: "10",
       }}
     >
       <div

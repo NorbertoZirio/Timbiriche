@@ -7,6 +7,7 @@ export default function Card() {
       <div
         style={{
           width: "140px",
+          minWidth: "140px",
           height: "85%",
           backgroundColor: "white",
           borderRadius: "20px",
