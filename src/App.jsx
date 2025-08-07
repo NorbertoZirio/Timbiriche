@@ -1,5 +1,6 @@
 import './styles/App.css'
 import BuildHeader from "./components/header";
+import Carrusel from "./components/carrusel";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       }}
     >
       <BuildHeader></BuildHeader>
+      <Carrusel></Carrusel>
     </div>
   );
 }

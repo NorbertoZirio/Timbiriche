@@ -3,22 +3,56 @@ export default function BuildHeader() {
     <div
       style={{
         display: "flex",
-        height: "15%",
+        height: "10%",
         minHeight: "50px",
         boxSizing: "border-box",
         padding: "10px",
         alignItems: "center",
         justifyContent: "space-between",
+        borderBottom: "5px solid #E37C20",
+        borderLeft: "5px solid #E37C20",
+        borderRight: "5px solid #E37C20",
+        //borderTop: "5px solid #E37C20",
+        boxShadow: "0px 4px 5px #E37C20",
+        backgroundImage: 'url("/public/Copilot_20250807_072503.png")',
+        backgroundRepeat: "repeat-x",
+        backgroundSize: "auto 300%",
+        backgroundPosition: "top center",
+        overflow: "hidden",
+        filter: "contrast(120%)",
       }}
     >
-      <img src="../img/Copilot_20250806_125910.png" alt="Icono" />
-      <h1>Timbiriche</h1>
+      <div
+        style={{
+          display: "flex",
+          height: "100%",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <img
+          style={{
+            height: "70%",
+            aspectRatio: "1/1",
+            objectFit: "contain",
+          }}
+          src="/public/Copilot_20250806_125910-Photoroom.png"
+          alt="image"
+        />
+        <h1>Timbiriche</h1>
+      </div>
 
       <nav
         style={{
+          //position: "absolute",
           width: "15%",
+          height: "50%",
           margin: "0%",
           padding: "0%",
+          //left: "50%",
+          transform: "translateX(-50%)",
+          display: "flex",
+          alignItems: "center",
         }}
       >
         <ul
@@ -30,26 +64,20 @@ export default function BuildHeader() {
             margin: "0%",
             padding: "0%",
             listStyle: "none",
+            height: "100%",
           }}
         >
-          <li
-            style={{
-              margin: "5%",
-            }}
-          >
+          <li>
             <a href="">Home</a>
           </li>
-          <li
-            style={{
-              margin: "5%",
-            }}
-          >
+          <li>
             <a href="">Shop</a>
           </li>
         </ul>
       </nav>
 
       <svg
+        className="shopingCart"
         style={{
           height: "50%",
           aspectRatio: "1/1",
