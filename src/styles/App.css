@@ -41,18 +41,49 @@ li:hover{
   scale: 1.1;
 }
 
-.arrow-lefth, .arrow-rigth{
-  position: absolute;
-  width: 40px;
-  aspect-ratio: 1/1;
-  fill: #E37C20;
-  transition: transform 0.3s;
+.embla {
+  overflow: hidden;
+  background-color: rgb(73, 73, 73);
+  height: 270px;
+  display: flex;
+}
+.embla__container {
+  display: flex;
+  height: 100%;
+  align-self: center;
+  
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  height: 85%;
+  background-color: black;
+  max-width: 140px;
+  align-self: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
 }
 
-.arrow-lefth{
-  left: 10px;
+.embla_slider {
+  overflow: hidden;
+  background-color: rgb(73, 73, 73);
+  height: 400px;
+  display: flex;
 }
 
-.arrow-rigth{
-  right: 10px;
+
+.slide__container {
+  display: flex;
+  width: 100%;
+  
+}
+
+
+.slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
 }

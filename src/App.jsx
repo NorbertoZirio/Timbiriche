@@ -1,18 +1,24 @@
 import './styles/App.css'
 import BuildHeader from "./components/header";
-import Carrusel from "./components/carrusel";
+import EmblaCarousel from './components/emblaCarrusel'
+import EmblaSlider from './components/slider'
+import Footer from './components/foother'
 
 function App() {
   return (
     <div
       style={{
-        height: "100%",
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column'
       }}
     >
       <BuildHeader></BuildHeader>
-      <Carrusel></Carrusel>
+      <EmblaSlider></EmblaSlider>
+      <EmblaCarousel></EmblaCarousel>
+      <Footer></Footer>
     </div>
-  );
+  )
 }
 
 export default App
