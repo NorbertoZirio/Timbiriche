@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-export default function Card({ url, name = 'Item', price }) {
+export default function Card({ url, name = 'Item', price, description }) {
+  let shortName = ''
   if (name.length > 12) {
-    name = name.slice(0, 12) + '...'
+    shortName = name.slice(0, 12) + '...'
   }
   const [isHovered, setIsHovered] = useState(false)
   const navigate = useNavigate()
@@ -15,7 +16,7 @@ export default function Card({ url, name = 'Item', price }) {
     setIsHovered(false)
   }
   function handleClick() {
-    navigate('/item')
+    navigate('/item', { state: { url, name, price, description } })
   }
 
   return (
@@ -54,7 +55,7 @@ export default function Card({ url, name = 'Item', price }) {
           textWrap: 'nowrap'
         }}
       >
-        {name}
+        {shortName}
       </h3>
       <div
         style={{

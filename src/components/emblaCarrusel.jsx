@@ -18,7 +18,7 @@ export default function EmblaCarousel() {
       })
     ]
   )
-
+  console.log(items)
   if (loading) {
     return <div>Cargando productos…</div>
   }
@@ -32,6 +32,7 @@ export default function EmblaCarousel() {
             url={item.image}
             name={item.title}
             price={item.price}
+            description={item.description}
           />
         ))}
       </div>
