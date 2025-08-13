@@ -15,7 +15,7 @@ export default function BuildHeader() {
         borderLeft: '5px solid #E37C20',
         borderRight: '5px solid #E37C20',
         boxShadow: '0px 4px 5px #E37C20',
-        backgroundImage: 'url("/public/Copilot_20250807_072503.png")',
+        backgroundImage: 'url("/Copilot_20250807_072503.png")',
         backgroundRepeat: 'repeat-x',
         backgroundSize: 'auto 300%',
         backgroundPosition: 'top center',
@@ -38,7 +38,7 @@ export default function BuildHeader() {
             aspectRatio: '1/1',
             objectFit: 'contain'
           }}
-          src="/public/Copilot_20250806_125910-Photoroom.png"
+          src="/Copilot_20250806_125910-Photoroom.png"
           alt="image"
         />
         <h1>Timbiriche</h1>
@@ -73,7 +73,7 @@ export default function BuildHeader() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="shop">Shop</Link>
+            <Link to="/shop">Shop</Link>
           </li>
         </ul>
       </nav>

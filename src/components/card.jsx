@@ -1,16 +1,21 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export default function Card({ url, name = 'Item', price }) {
   if (name.length > 12) {
     name = name.slice(0, 12) + '...'
   }
   const [isHovered, setIsHovered] = useState(false)
+  const navigate = useNavigate()
 
   function handleMouseEnter() {
     setIsHovered(true)
   }
   function handleMouseLeave() {
     setIsHovered(false)
+  }
+  function handleClick() {
+    navigate('/item')
   }
 
   return (
@@ -38,6 +43,7 @@ export default function Card({ url, name = 'Item', price }) {
         }}
         src={url}
         alt=""
+        onClick={handleClick}
       />
       <h3
         style={{

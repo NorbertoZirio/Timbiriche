@@ -23,7 +23,7 @@ export default function Footer() {
               aspectRatio: '1/1',
               objectFit: 'contain'
             }}
-            src="/public/Copilot_20250806_125910-Photoroom.png"
+            src="/Copilot_20250806_125910-Photoroom.png"
             alt="image"
           />
           <h1

@@ -19,8 +19,7 @@ body {
   display: flex;
   min-width: 320px;
   width: 100%;
-  min-height: 100vh;
-  height: 130vh;
+  min-height: 130vh;
   
 }
 

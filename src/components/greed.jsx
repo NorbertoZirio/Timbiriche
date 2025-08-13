@@ -15,7 +15,8 @@ export default function GreedCards() {
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
         gridAutoRows: '270px',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        backgroundImage: 'url("/Copilot_20250807_072503.png")'
       }}
     >
       {items.map((item, i) => (

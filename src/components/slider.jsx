@@ -1,8 +1,8 @@
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
-import '/public/Copilot_20250812_070631.png'
-import '/public/Copilot_20250812_071226.png'
-import '/public/photo_4960732178463960545_y.jpg'
+import '/Copilot_20250812_070631.png'
+import '/Copilot_20250812_071226.png'
+import '/photo_4960732178463960545_y.jpg'
 
 export default function EmblaSlider() {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [
@@ -14,7 +14,7 @@ export default function EmblaSlider() {
       <div className="slide__container">
         <div
           style={{
-            backgroundImage: 'url(/public/Copilot_20250812_071226.png)',
+            backgroundImage: 'url(/Copilot_20250812_071226.png)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             display: 'flex',
@@ -28,7 +28,7 @@ export default function EmblaSlider() {
         </div>
         <div
           style={{
-            backgroundImage: 'url(/public/Copilot_20250812_070631.png)',
+            backgroundImage: 'url(/Copilot_20250812_070631.png)',
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}
@@ -40,21 +40,25 @@ export default function EmblaSlider() {
           <h3 style={{ alignSelf: 'center', fontSize: '200%', color: 'white' }}>
             🎈🎊Celebrating July 11th🎊🎈
           </h3>
-          <button style={{
-            backgroundColor: "transparent",
-            borderColor: 'white',
-            borderStyle: "solid",
-            borderRadius: "10px",
-            height: "60px",
-            width: "180px",
-            fontSize: "150%",
-            color: "white",
-            fontWeight: "bolder"
-          }}>Shoping now</button>
+          <button
+            style={{
+              backgroundColor: 'transparent',
+              borderColor: 'white',
+              borderStyle: 'solid',
+              borderRadius: '10px',
+              height: '60px',
+              width: '180px',
+              fontSize: '150%',
+              color: 'white',
+              fontWeight: 'bolder'
+            }}
+          >
+            Shoping now
+          </button>
         </div>
         <div
           style={{
-            backgroundImage: 'url(/public/photo_4960732178463960545_y.jpg)',
+            backgroundImage: 'url(/photo_4960732178463960545_y.jpg)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             display: 'flex',
