@@ -1,12 +1,16 @@
-
+import { useState } from 'react'
 
 export default function Card({ url, name = 'Item', price }) {
   if (name.length > 12) {
     name = name.slice(0, 12) + '...'
   }
+  const [isHovered, setIsHovered] = useState(false)
 
-  function handleMausEnter() {
-    console.log(name)
+  function handleMouseEnter() {
+    setIsHovered(true)
+  }
+  function handleMouseLeave() {
+    setIsHovered(false)
   }
 
   return (
@@ -14,9 +18,13 @@ export default function Card({ url, name = 'Item', price }) {
       className="embla__slide"
       style={{
         color: 'white',
-        backgroundColor: '#E37C20'
+        backgroundColor: '#E37C20',
+        transform: isHovered ? 'scale(1.1)' : 'scale(1)',
+        transition: 'transform 0.3s ease',
+        cursor: 'pointer'
       }}
-      onMouseDown={handleMausEnter()}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       <img
         style={{

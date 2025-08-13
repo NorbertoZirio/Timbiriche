@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   text-align: center;
+  overflow: hidden;
 }
 
 
@@ -52,11 +53,13 @@ li:hover{
   background-position:center;
   overflow: 'hidden';
   filter: contrast(120%);
+  width: 100%;
 }
 .embla__container {
   display: flex;
   height: 100%;
   align-self: center;
+  width: 100%;
   
 }
 .embla__slide {

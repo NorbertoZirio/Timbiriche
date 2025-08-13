@@ -5,14 +5,18 @@ import { ShopData } from './shopData'
 import { useEffect, useState } from 'react'
 
 export default function EmblaCarousel() {
-  const [emblaRef] = useEmblaCarousel({ loop: true }, [
-    AutoScroll({
-      stopOnInteraction: false,
-      startDelay: 500,
-      stopOnMouseEnter: true,
-      speed: 0.5
-    })
-  ])
+  const [emblaRef] = useEmblaCarousel(
+    { loop: false, containScroll: 'keepSnaps', align: 'start' },
+    [
+      AutoScroll({
+        stopOnInteraction: false,
+        startDelay: 500,
+        //stopOnMouseEnter: true,
+        stopOnFocusIn: false,
+        speed: 0.5
+      })
+    ]
+  )
   const [url, setUrl] = useState([''])
   const [price, setPrice] = useState([''])
   const [name, setName] = useState([''])
