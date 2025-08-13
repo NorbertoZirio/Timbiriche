@@ -1,10 +1,11 @@
 import useEmblaCarousel from 'embla-carousel-react'
 import Card from './card'
 import AutoScroll from 'embla-carousel-auto-scroll'
-import { ShopData } from './shopData'
-import { useEffect, useState } from 'react'
+import { useContext } from 'react'
+import { ShopContext } from '../context/ShopContext'
 
 export default function EmblaCarousel() {
+  const { items, loading } = useContext(ShopContext)
   const [emblaRef] = useEmblaCarousel(
     { loop: false, containScroll: 'keepSnaps', align: 'start' },
     [
@@ -13,37 +14,25 @@ export default function EmblaCarousel() {
         startDelay: 500,
         //stopOnMouseEnter: true,
         stopOnFocusIn: false,
-        speed: 0.5
+        speed: 2
       })
     ]
   )
-  const [url, setUrl] = useState([''])
-  const [price, setPrice] = useState([''])
-  const [name, setName] = useState([''])
 
-  useEffect(() => {
-    async function getData() {
-      try {
-        let data = await ShopData()
-        const itemUrl = data.map((item) => item.image)
-        const itemName = data.map((item) => item.title)
-        const itemPrice = data.map((item) => item.price)
-        setUrl(itemUrl)
-        setName(itemName)
-        setPrice(itemPrice)
-        console.log(data)
-      } catch (err) {
-        console.log(err)
-      }
-    }
-    getData()
-    console.log(url)
-  }, [])
+  if (loading) {
+    return <div>Cargando productos…</div>
+  }
+
   return (
     <div className="embla" ref={emblaRef}>
       <div className="embla__container">
-        {Array.from({ length: 20 }, (_, i) => (
-          <Card key={i} url={url[i]} name={name[i]} price={price[i]} />
+        {items.map((item, i) => (
+          <Card
+            key={item.id || i}
+            url={item.image}
+            name={item.title}
+            price={item.price}
+          />
         ))}
       </div>
     </div>

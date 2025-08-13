@@ -1,12 +1,31 @@
-import Card from "./card"
-
+import Card from './card'
+import { ShopContext } from '../context/ShopContext'
+import { useContext } from 'react'
 
 export default function GreedCards() {
-    return <div style={{
-        display: "grid",
-        gridTemplateColumns: "1fr",
-        gridTemplateRows: "270px"
-    }}>
-        <Card></Card>
+  const { items, loading } = useContext(ShopContext)
+
+  if (loading) {
+    return <div>Cargando productos…</div>
+  }
+
+  return (
+    <div
+      style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
+        gridAutoRows: '270px',
+        justifyContent: 'center'
+      }}
+    >
+      {items.map((item, i) => (
+        <Card
+          key={item.id || i}
+          url={item.image}
+          name={item.title}
+          price={item.price}
+        />
+      ))}
     </div>
+  )
 }

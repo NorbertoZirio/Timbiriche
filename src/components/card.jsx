@@ -50,7 +50,36 @@ export default function Card({ url, name = 'Item', price }) {
       >
         {name}
       </h3>
-      <p>{price}$</p>
+      <div
+        style={{
+          display: 'flex',
+          margin: '5px',
+          height: '20%',
+          alignItems: 'center'
+        }}
+      >
+        <button
+          style={{
+            backgroundColor: '#2E2E2E',
+            border: 'solid 2px white',
+            height: '80%',
+            width: '50%',
+            color: 'white',
+            borderRadius: '5px'
+          }}
+        >
+          Buy
+        </button>
+        <p
+          style={{
+            marginTop: '0',
+            marginBottom: '0',
+            marginLeft: 'auto'
+          }}
+        >
+          {price}$
+        </p>
+      </div>
     </div>
   )
 }

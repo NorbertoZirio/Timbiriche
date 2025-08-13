@@ -3,7 +3,8 @@
   margin: 0;
   padding: 0;
   text-align: center;
-  overflow: hidden;
+  
+  
 }
 
 
@@ -78,7 +79,8 @@ li:hover{
 .embla_slider {
   overflow: hidden;
   background-color: rgb(73, 73, 73);
-  height: 400px;
+  min-height: 400px;
+  flex: auto;
   display: flex;
 }
 
