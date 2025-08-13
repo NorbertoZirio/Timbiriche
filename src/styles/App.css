@@ -46,6 +46,12 @@ li:hover{
   background-color: rgb(73, 73, 73);
   height: 270px;
   display: flex;
+  background-image: url('/public/Copilot_20250807_072503.png');
+  background-repeat: repeat-x;
+  background-size: "auto 300%";
+  background-position:center;
+  overflow: 'hidden';
+  filter: contrast(120%);
 }
 .embla__container {
   display: flex;
@@ -63,6 +69,7 @@ li:hover{
   margin-left: 10px;
   margin-right: 10px;
   border-radius: 10px;
+  
 }
 
 .embla_slider {
